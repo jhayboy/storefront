@@ -1,23 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+// import Navbar from './Components/Navbar';
+// import Storefront from './Components/Storefront';
+import Home from './Components/Home';
+import { CartContext } from './CartContext/CartContext';
+import { TotalContext } from './CartContext/TotalContext';
+import Shipping from './Components/Shipping';
+import Paystack from './Components/Paystack';
+import { ItemsContext } from './CartContext/ItemsContext';
 
 function App() {
+  const [cartitem, setCartitem] = useState([])
+  const [total, setTotal] = useState()
+  const [itemCart, setItemCart] = useState({})
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ItemsContext.Provider value={{itemCart, setItemCart}}>
+        <TotalContext.Provider value={{total, setTotal}}>
+          <CartContext.Provider value={{cartitem, setCartitem}}>
+            <Router>
+              <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/paynow' element={<Paystack/>}/>
+                <Route path='/shipping' element={<Shipping/>}/>
+              </Routes>
+            </Router>
+          </CartContext.Provider>
+        </TotalContext.Provider>
+      </ItemsContext.Provider>
     </div>
   );
 }
