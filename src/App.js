@@ -14,6 +14,13 @@ function App() {
   const [cartitem, setCartitem] = useState([])
   const [total, setTotal] = useState()
   const [itemCart, setItemCart] = useState({})
+  const [values, setValues] = useState({
+    address: "", 
+    city: "", 
+    state: "", 
+    country: "", 
+    zipcode: ""
+});
 
   return (
     <div>
@@ -23,8 +30,8 @@ function App() {
             <Router>
               <Routes>
                 <Route path='/' element={<Home/>}/>
-                <Route path='/paynow' element={<Paystack/>}/>
-                <Route path='/shipping' element={<Shipping/>}/>
+                <Route path='/paynow' element={<Paystack values={values}/>}/>
+                <Route path='/shipping' element={<Shipping setValues={setValues} values={values}/>}/>
               </Routes>
             </Router>
           </CartContext.Provider>
