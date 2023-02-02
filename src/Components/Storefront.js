@@ -160,7 +160,7 @@ export default function Storefront({carts, handleCarts}) {
                                     {/* <div onClick={() => handleClick(product)} className="w-full flex justify-end p-3">
                                         {watch === product ? <AiFillHeart size={25}/> : <AiOutlineHeart size={25}/>}
                                     </div> */}
-                                    <img onClick={() => handleDes(product)} className='w-40 h-40 object-cover' src={product.images} alt='sneakers'/>
+                                    <img onClick={() => handleDes(product)} className='w-40 h-40 object-cover' src={product.images} alt={product.name}/>
                                 </div>
                                 <div className='flex justify-between w-full py-4'>
                                     <div>
