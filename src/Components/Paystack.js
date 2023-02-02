@@ -13,7 +13,7 @@ const Paystack = ({values}) =>{
   const cartinfo = JSON.stringify(cartitem)
   const {total} = useContext(TotalContext)
   const navigate = useNavigate()
-  const publicKey = "pk_test_3d0512a0e2294a19429257c354e7829b15633cf8"
+  const publicKey = process.env.REACT_APP_PAYSTACK_API_KEY
   const amount = total * 100 // Remember, set in kobo!
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")

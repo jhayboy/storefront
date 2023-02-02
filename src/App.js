@@ -1,14 +1,14 @@
-import './App.css';
+// import Navbar from './Components/Navbar';
 import React, {useState} from 'react';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-// import Navbar from './Components/Navbar';
 // import Storefront from './Components/Storefront';
-import Home from './Components/Home';
 import { CartContext } from './CartContext/CartContext';
+import Home from './Components/Home';
 import { TotalContext } from './CartContext/TotalContext';
 import Shipping from './Components/Shipping';
 import Paystack from './Components/Paystack';
 import { ItemsContext } from './CartContext/ItemsContext';
+import Contact from './Components/Contact';
 
 function App() {
   const [cartitem, setCartitem] = useState([])
@@ -31,6 +31,7 @@ function App() {
               <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/paynow' element={<Paystack values={values}/>}/>
+                <Route path='/contactxshopino' element={<Contact/>}/>
                 <Route path='/shipping' element={<Shipping setValues={setValues} values={values}/>}/>
               </Routes>
             </Router>

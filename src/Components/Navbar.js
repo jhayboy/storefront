@@ -1,4 +1,5 @@
 import React, {useState, useContext} from 'react'
+import {Link} from 'react-router-dom'
 import {SiCarthrottle} from "react-icons/si"
 import {BsBag} from "react-icons/bs"
 import {GiHamburgerMenu} from "react-icons/gi"
@@ -22,8 +23,10 @@ export default function Navbar({handleCarts}) {
             <ul className='flex gap-4'>
                 <li className='cursor-pointer'>Home</li>
                 <li className='cursor-pointer'>Store</li>
-                <li className='cursor-pointer'>Woman</li>
-                <li className='cursor-pointer'>Contact</li>
+                <li className='cursor-pointer'>Luxury</li>
+                <Link to='/contactxshopino'>
+                    <li className='cursor-pointer'>Contact</li>
+                </Link>
             </ul>
         </div>
             <div onClick={handleCarts} className='bg-[#cae96f] rounded-lg p-1 relative hidden md:flex cursor-pointer'>
@@ -48,8 +51,10 @@ export default function Navbar({handleCarts}) {
                 <ul className='flex w-full gap-5 text-black flex-col mt-5'>
                     <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Store</li>
                     <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Home</li>
-                    <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Woman</li>
-                    <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Contact</li>
+                    <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Luxury</li>
+                    <Link to='/contactxshopino'>
+                        <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Contact</li>
+                    </Link>
                 </ul>
             </div>
         </div>

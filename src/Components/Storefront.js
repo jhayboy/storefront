@@ -24,7 +24,6 @@ export default function Storefront({carts, handleCarts}) {
     const [cartItem, setCartItem] = useState([])
     const allprice = cartItem.reduce((price, item) => price + item.quantity *item.price, 0)
     const totalPrice = allprice.toLocaleString()
-    const [prices, setPrices] = useState(sneak.map((product) => product))
   
    
     
@@ -143,7 +142,7 @@ export default function Storefront({carts, handleCarts}) {
 
 
 {/* THE CART ICON THAT WIL SHOW ONLY WHEN IT IS ON SMALL SCREEN */}
-            <div onClick={handleCarts} className={cartItem.length > 0 ? 'bg-black rounded-lg p-1 cursor-pointer fixed bottom-10 right-10 md:hidden' : 'hidden'}>
+            <div onClick={handleCarts} className={cartItem.length > 0 ? 'bg-black rounded-lg p-1 cursor-pointer fixed bottom-10 right-10 md:hidden animate-bounce' : 'hidden'}>
                 <BsBag className='text-white'/>
                 <div className='absolute ml-3 w-3 h-3 rounded-full bg-white flex justify-center items-center text-black'>
                     <p className='text-xs'>{cartItem.length}</p>
@@ -172,9 +171,9 @@ export default function Storefront({carts, handleCarts}) {
                                         </button>  
                                     </div>
                                     <div className='flex flex-col justify-center items-end'>
-                                        <p className='font-semibold '>&#8358;{(product.price).toLocaleString()}</p>
+                                        <p className='font-semibold '>&#8358;{product.price?.toLocaleString()}</p>
                                         <div className='mt-2 flex justify-center items-center p-1'>
-                                            <p className='text-sm text-slate-400'>{product.sold} sold</p>
+                                            <p className='text-sm text-slate-400'>{(product.sold).toLocaleString()} sold</p>
                                         </div>
                                     </div>
                                 </div>
