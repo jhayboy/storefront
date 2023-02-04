@@ -1,7 +1,7 @@
 export const sneak = [
     {
         id: "1",
-        images: "./Image/singlewireless.png",
+        images: "./Image/sneak_1-removebg-preview.png",
         name: "Brick Cage",
         price: 650,
         sold: "5839",
