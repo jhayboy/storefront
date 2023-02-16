@@ -41,12 +41,6 @@ const Paystack = ({values}) =>{
   
   const submitDetails = async(e) => {
     e.preventDefault()
-    // await emailjs.sendForm('service_pqbhyar', 'template_winf26i', values.address, values.state, values.country, values.zipcode, values.city, name, email, phone, '8NEk374QRG1Nsz1-o')
-    // .then((result) => {
-    //     console.log(result.text);
-    // }, (error) => {
-    //     console.log(error.text);
-    // });
     setLoading(true)
     await emailjs.send('service_pqbhyar', 'template_winf26i', {address: values.address, state: values.state, country: values.country, zipcode: values.zipcode, city: values.city, name: name, email: email, phone: phone, cart: cartinfo}, '8NEk374QRG1Nsz1-o')
     .then((result) => {

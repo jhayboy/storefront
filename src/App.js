@@ -1,6 +1,6 @@
 // import Navbar from './Components/Navbar';
-import React, {useState} from 'react';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import React, {useState, useEffect} from 'react';
+import {BrowserRouter as Router, Routes, Route, useLocation} from "react-router-dom"
 // import Storefront from './Components/Storefront';
 import { CartContext } from './CartContext/CartContext';
 import Home from './Components/Home';
@@ -9,6 +9,19 @@ import Shipping from './Components/Shipping';
 import Paystack from './Components/Paystack';
 import { ItemsContext } from './CartContext/ItemsContext';
 import Contact from './Components/Contact';
+import Product from './Components/Product';
+import Navbar from './Components/Navbar';
+
+
+const ScrollToTop = () => {
+  const {pathname} = useLocation()
+
+  useEffect (()=>{
+    window.scrollTo(0,0);
+  },[pathname])
+
+  return null
+}
 
 function App() {
   const [cartitem, setCartitem] = useState([])
@@ -28,10 +41,13 @@ function App() {
         <TotalContext.Provider value={{total, setTotal}}>
           <CartContext.Provider value={{cartitem, setCartitem}}>
             <Router>
+            <ScrollToTop/>
+            <Navbar/>
               <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/paynow' element={<Paystack values={values}/>}/>
                 <Route path='/contactxshopino' element={<Contact/>}/>
+                <Route path='/product' element={<Product/>}/>
                 <Route path='/shipping' element={<Shipping setValues={setValues} values={values}/>}/>
               </Routes>
             </Router>

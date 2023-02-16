@@ -1,5 +1,5 @@
 import React, {useState, useContext, useEffect} from 'react'
-// import {Link} from "react-router-dom"
+import {Link} from "react-router-dom"
 import { sneak } from './SneakersData'
 import {GiAmmoBox} from "react-icons/gi"
 import {BsBag} from "react-icons/bs"
@@ -19,25 +19,22 @@ export default function Storefront({carts, handleCarts}) {
     const [desTrig, setDesTrig] = useState(null)
    
 
-    
-   
-    const [cartItem, setCartItem] = useState([])
-    const allprice = cartItem.reduce((price, item) => price + item.quantity *item.price, 0)
+    const [cartItem, setCartItem] = useState(() => JSON.parse(localStorage.getItem('cartList')) || [])
+    const allprice = cartItem.reduce((price, item) => price + item.quantity * item.price, 0)
     const totalPrice = allprice.toLocaleString()
-  
+    const [bag, setBag] = useState([])
    
     
     const handleCheck = () =>{
         setTotal(allprice)
     }
-    useEffect(()=>{
-        setCartitem(cartItem)
-        if (cartItem.length === 0){
-            localStorage.removeItem('cartList')
-        }
         
-    },[cartItem, setCartitem])
-
+    useEffect(()=>{
+        setBag(cartItem)
+        setCartitem(cartItem)
+        localStorage.setItem('cartList',JSON.stringify(cartItem))
+    },[cartItem, setBag, setCartitem])
+    
 
 
     const handleDelete = (product) =>{
@@ -78,13 +75,11 @@ export default function Storefront({carts, handleCarts}) {
             setCartItem(cartItem.map((item) => item.id === product.id ? {...ProductExist, quantity: ProductExist.quantity + 1} : item))
         } else {
             setCartItem([...cartItem, {...product, quantity: 1}])
-            localStorage.setItem("cartList", JSON.stringify(cartItem))
             
         }
     }
     // const theItem = localStorage.getItem('cartList')
     // const main = JSON.parse(theItem)
-    console.log(cartItem)
     // const itemsInCart = window.localStorage.removeItem("chartitem")
     // console.log(itemsInCart)
 
@@ -100,13 +95,16 @@ export default function Storefront({carts, handleCarts}) {
 
   return (
     // THE HERO SECTION THAT HAS A BG OF KINDA BLACK
-    <div className='relative w-full' >
+    <div className=' w-full' >
         {/* the banner section  */}
         <div className='w-full bg-[#222222] flex flex-col justify-center items-center'>
             <p className='description font-semibold text-4xl text-white text-center tracking-wide'>Design & high quality</p>
             <p className='sales text-center my-5 text-white'>Sales of high-quality branded sneakers in a wide range with unique designs</p>
             <div className='my-5 flex gap-3'>
-                <button className='openstore bg-[#cae96f] p-2 px-3 rounded-full text-xs'>Open Store</button>
+                
+                <Link to='/product'>
+                    <button className='openstore bg-[#cae96f] p-2 px-3 rounded-full text-xs'>Open Store</button>
+                </Link>
                 <button className='explore border border-[#cae96f] text-[#cae96f] p-2 rounded-full text-xs'>Explore More</button>
             </div>
             <div className='bg-white rounded-xl p-2 hidden md:block'>
@@ -142,15 +140,12 @@ export default function Storefront({carts, handleCarts}) {
 
 
 {/* THE CART ICON THAT WIL SHOW ONLY WHEN IT IS ON SMALL SCREEN */}
-            <div onClick={handleCarts} className={cartItem.length > 0 ? 'bg-black rounded-lg p-1 cursor-pointer fixed bottom-10 right-10 md:hidden animate-bounce' : 'hidden'}>
-                <BsBag className='text-white'/>
-                <div className='absolute ml-3 w-3 h-3 rounded-full bg-white flex justify-center items-center text-black'>
-                    <p className='text-xs'>{cartItem.length}</p>
-                </div>
-            </div>
+
+            
 
 {/* MAPPING THROUGH THE PRODUCT */}
             <div className='w-full'>
+                
                 <div className='md:grid md:grid-cols-4 gap-5'>
                     {/* mapping through the product items and display them on the screen */}
                     {sneak.map((product) => {
@@ -184,6 +179,12 @@ export default function Storefront({carts, handleCarts}) {
                 </div>
             </div>
         </div>
+                <div onClick={handleCarts} className='bg-black rounded-lg p-1 fixed bottom-10 right-10 md:hidden animate-bounce'>
+                    <BsBag className='text-white'/>
+                    <div className='absolute ml-3 w-3 h-3 rounded-full bg-white flex justify-center items-center text-black'>
+                        <p className='text-xs'>{cartItem.length}</p>
+                    </div>
+                </div>
 
 
         {/* THE DESCRIPTION THAT AT THE BOTTOM OF THE PAGE */}
