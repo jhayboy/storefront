@@ -1,13 +1,13 @@
-import React, {useState} from "react"
+import React from "react"
 // import Navbar from "./Navbar"
 import Storefront from "./Storefront"
 
-export default function Home(){
-    const [carts, setCarts] = useState(true)
-    const handleCarts = () =>{
-      setCarts(!carts)
-    }
-
+export default function Home({carts, handleCarts}){
+    
+    // const [carts, setCarts] = useState(true)
+    // const handleCarts = () =>{
+    //   setCarts(!carts)
+    // }
     return(
         <div>
             {/* <Navbar handleCarts={handleCarts}/> */}

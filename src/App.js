@@ -14,6 +14,7 @@ import Navbar from './Components/Navbar';
 
 
 const ScrollToTop = () => {
+  
   const {pathname} = useLocation()
 
   useEffect (()=>{
@@ -35,6 +36,10 @@ function App() {
     zipcode: ""
 });
 
+  const [carts, setCarts] = useState(true)
+    const handleCarts = () =>{
+      setCarts(!carts)
+  } 
   return (
     <div>
       <ItemsContext.Provider value={{itemCart, setItemCart}}>
@@ -42,9 +47,9 @@ function App() {
           <CartContext.Provider value={{cartitem, setCartitem}}>
             <Router>
             <ScrollToTop/>
-            <Navbar/>
+            <Navbar handleCarts={handleCarts}/>
               <Routes>
-                <Route path='/' element={<Home/>}/>
+                <Route path='/' element={<Home carts={carts} handleCarts={handleCarts}/>}/>
                 <Route path='/paynow' element={<Paystack values={values}/>}/>
                 <Route path='/contactxshopino' element={<Contact/>}/>
                 <Route path='/product' element={<Product/>}/>

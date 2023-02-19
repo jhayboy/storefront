@@ -17,20 +17,22 @@ export default function Navbar({handleCarts}) {
     <div className='flex justify-between bg-[#222222] px-5 py-3 sticky top-0 z-10 text-white items-center'>
         <div className='flex justify-center items-center gap-1'>
             <SiCarthrottle size={30}/>
-            <p className='font-semibold'>Storefront</p>
+            <p className='font-semibold'>Xshopino</p>
         </div>
         <div className='hidden md:flex'>
             <ul className='flex gap-4'>
-                <li className='cursor-pointer'>Home</li>
-                <li className='cursor-pointer'>Store</li>
-                <li className='cursor-pointer'>Luxury</li>
+                <Link to='/'>
+                    <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Home</li>
+                </Link>
+                <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Store</li>
+                <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Luxury</li>
                 <Link to='/contactxshopino'>
-                    <li className='cursor-pointer'>Contact</li>
+                    <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Contact</li>
                 </Link>
             </ul>
         </div>
             <div onClick={handleCarts} className='bg-[#cae96f] rounded-lg p-1 relative hidden md:flex cursor-pointer'>
-                <BsBag />
+                <BsBag className='text-black font-bold'/>
                 <div className='absolute ml-3 w-3 h-3 rounded-full bg-white flex justify-center items-center text-black'>
                     <p className='text-xs'>{cartitem.length}</p>
                 </div>
@@ -43,7 +45,7 @@ export default function Navbar({handleCarts}) {
             <div className='flex justify-between items-center w-full'>
                 <div className='flex justify-center items-center gap-1'>
                     <SiCarthrottle size={30} className="text-black"/>
-                    <p className='font-semibold text-black'>Storefront</p>
+                    <p className='font-semibold text-black'>Xshopino</p>
                 </div>
                 
             </div>

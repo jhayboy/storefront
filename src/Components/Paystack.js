@@ -1,4 +1,4 @@
-import React, {useState, useContext} from "react"
+import React, {useState, useContext, useEffect} from "react"
 import { useNavigate } from "react-router-dom";
 import { PaystackButton } from 'react-paystack'
 import emailjs from '@emailjs/browser';
@@ -21,23 +21,14 @@ const Paystack = ({values}) =>{
   const [paid, setPaid] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  // IF THERE IS NO TOTAL SEND THEM BACK TO HOME PAGE
-  // IF THERE IS NO TOTAL SEND THEM BACK TO HOME PAGE
-  // IF THERE IS NO TOTAL SEND THEM BACK TO HOME PAGE
-  // IF THERE IS NO TOTAL SEND THEM BACK TO HOME PAGE
-  // IF THERE IS NO TOTAL SEND THEM BACK TO HOME PAGE
 
  
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault()
-  //   emailjs.sendForm('service_pqbhyar', 'template_winf26i', {address: delivery.address, state: delivery.state, country: delivery.country, name: name, email: email, phone: phone }, '8NEk374QRG1Nsz1-o')
-  //   .then((result) => {
-  //       console.log(result.text);
-  //   }, (error) => {
-  //       console.log(error.text);
-  //   });
-  // }
+ useEffect(()=> {
+  if (!amount){
+    navigate('/')
+  }
+ })
   
   const submitDetails = async(e) => {
     e.preventDefault()
@@ -71,17 +62,17 @@ const Paystack = ({values}) =>{
               <div className='flex justify-between items-center w-full '>
                   <div className='flex justify-center items-center gap-1 mb-5'>
                       <SiCarthrottle size={30} className="text-black"/>
-                      <p className='font-semibold text-black'>Storefront</p>
+                      <p className='font-semibold text-black'>Xshopino</p>
                   </div>
               </div>
-              <div className={paid ? "fixed top-0 bottom-0 right-0 left-0 flex justify-center items-center" : "hidden"}>
-                <div className="fixed w-[70%] p-5 bg-white flex flex-col gap-2">
-                  <div className="flex gap-1 items-center">
+              <div className={paid ? "fixed top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-black/80 " : "hidden"}>
+                <div className="fixed w-[70%] md:w-[50%] px-5 py-20 bg-white flex flex-col justify-center items-center gap-2">
+                  <div className="flex gap-1 items-center"> 
                     <SiCarthrottle size={30} className="text-black"/>
-                    <p className='font-semibold text-black'>Storefront</p>
+                    <p className='font-semibold text-black'>Xshopino</p>
                   </div>
                   <p>Thanks for the purchase, we hope to see you again</p>
-                  <button onClick={submitDetails} className="bg-[#222222] mt-3 px-2 py-2 rounded-lg font-semibold text-white flex justify-center items-center">{loading ? <AiOutlineLoading3Quarters className="animate-spin"/> : "Continue"}</button>
+                  <button onClick={submitDetails} className="bg-[#222222] w-[50%] mt-3 px-2 py-2 rounded-lg font-semibold text-white flex justify-center items-center">{loading ? <AiOutlineLoading3Quarters className="animate-spin"/> : "Continue"}</button>
                 </div>
               </div>
                 <div className="checkout-field flex flex-col w-full">

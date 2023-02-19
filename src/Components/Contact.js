@@ -31,12 +31,12 @@ export default function Contact(){
         setContact({...contact,[event.target.name]: event.target.value})
     }
     return (
-    <div className="flex flex-col items-center justify-center h-screen bg-blue-600 px-8">
-        <div className='flex justify-center items-center gap-1 text-white mb-3'>
-            <SiCarthrottle size={40}/>
-            <p className='font-semibold text-2xl'>Xshopino Support</p>
-        </div>
-      <p className="text-white mb-8 text-center">Need help with your account? Please contact us using the form below:</p>
+    <div className="flex flex-col items-center justify-center h-screen bg-[#222222] px-8">
+        <div className='flex justify-center items-center gap-1 text-[#cae96f] mb-3'>
+            <SiCarthrottle size={40} />
+            <p className='font-semibold text-2xl '>Xshopino Support</p>
+        </div> 
+      <p className="text-white mb-8 text-center">Need help with a product? Please contact us using the form below:</p>
       <form className="w-full max-w-sm">
         <div className="md:flex  mb-6 md:flex-col ">
           <div className="md:w-full md:flex md:flex-start">
@@ -69,9 +69,9 @@ export default function Contact(){
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <button disabled={lock} className="px-3 bg-white rounded-md py-1" onClick={handleSubmit}>{loading ? <AiOutlineLoading3Quarters className="animate-spin text-xl text-black"/> : 'Submit'}</button>
+          <button disabled={lock} className="px-3 bg-[#cae96f] font-bold rounded-md py-1" onClick={handleSubmit}>{loading ? <AiOutlineLoading3Quarters className="animate-spin text-xl text-black"/> : 'Submit'}</button>
           <Link to='/'>
-             <button className="px-3 bg-white rounded-md py-1 flex items-center gap-1">Back <AiOutlineRollback/></button>
+             <button className="px-3 bg-[#cae96f] font-bold rounded-md py-1 flex items-center gap-1">Back <AiOutlineRollback/></button>
           </Link>
         </div>
         </form>
@@ -79,19 +79,5 @@ export default function Contact(){
     )
 }
 
-{/* <div className="slant-container w-full h-full">
-            <div className="w-12 h-12 rounded-full bg-slate-600 flex justify-center items-center">
-                <RxAvatar size={55} className="text-blue-600 border"/>
-            </div>
-            <div className="flex flex-col ">
-                <p>We Are Happy To Hear From</p>
-                <form>
-                    <input type="email" placeholder="Email Address"/>
-                    <p>Enter Your Email<br/> To Continue</p>
-                    <button>Continue</button>
-                </form>
-            </div>
-        </div> */}
 
-
-//        
+       

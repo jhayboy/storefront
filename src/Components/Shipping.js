@@ -34,7 +34,7 @@ export default function Shipping({values, setValues}) {
                 <div className='flex justify-between items-center w-full '>
                     <div className='flex justify-center items-center gap-1 mb-5'>
                         <SiCarthrottle size={30} className="text-black"/>
-                        <p className='font-semibold text-black'>Storefront</p>
+                        <p className='font-semibold text-black'>Xshopino</p>
                     </div>
                 </div>
                 <div className=" flex flex-col w-full">

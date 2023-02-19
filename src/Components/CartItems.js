@@ -6,7 +6,7 @@ import {MdDelete} from 'react-icons/md'
 export default function CartItems({handleRemoveItem, cartItem, carts, totalPrice, handleCheck, handleDelete, handleCarts, handleAddItem}){
     
     return(
-        <div className={!carts ?  "p-5 fixed top-0 bottom-0 right-0 w-[375px] bg-[#f2f2f2] gap-3 flex flex-col pt-20" : "hidden" }>
+        <div className={!carts ?  "p-5 fixed top-0 bottom-0 right-0 w-[375px] bg-[#f2f2f2] gap-3 z-30 flex flex-col pt-20" : "hidden" }>
             <AiFillCloseCircle size={25} onClick={handleCarts}/>
             <div className='h-[75%] flex flex-col gap-2 overflow-auto'>
                 {cartItem.length === 0 ? 

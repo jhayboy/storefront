@@ -8,7 +8,7 @@ export default function CellPhone() {
     return(
         <div className='grid grid-cols-2 gap-x-3 gap-y-3 sm:grid sm:grid-cols-2 md:grid md:grid-cols-4 md:gap-4 '>
             {Phones.map((item) => (
-                <div key={item.id} className='flex flex-col justify-center items-center mt-4 text-sm shadow-xl '>
+                <div key={item.id} className='flex flex-col justify-center items-center mt-4 text-sm shadow-xl py-3'>
                     <div className='bg-white rounded-xl flex flex-col justify-center items-center'>
                         {/* <div onClick={() => handleClick(item)} className="w-full flex justify-end p-3">
                             {watch === item ? <AiFillHeart size={25}/> : <AiOutlineHeart size={25}/>}
