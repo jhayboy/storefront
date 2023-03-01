@@ -41,7 +41,7 @@ export default function Navbar({handleCarts}) {
             {!bars ? <GrFormClose size={20} className='text-black'/> : <GiHamburgerMenu className='text-black'/>}
         </div>
 
-        <div className={bars ? 'hidden' : 'fixed px-3 left-0 top-0 bottom-0 py-3 bg-white w-[70%] h-full z-10 flex flex-col items-center md:hidden'}>
+        <div className={bars ? 'hidden' : 'navslide fixed px-3 left-0 top-0 bottom-0 py-3 bg-white w-[70%] h-full z-10 flex flex-col items-center md:hidden'}>
             <div className='flex justify-between items-center w-full'>
                 <div className='flex justify-center items-center gap-1'>
                     <SiCarthrottle size={30} className="text-black"/>
@@ -55,7 +55,7 @@ export default function Navbar({handleCarts}) {
                     <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Home</li>
                     <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Luxury</li>
                     <Link to='/contactxshopino'>
-                        <li className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Contact</li>
+                        <li onClick={handleClick} className='border border-x-0 border-t-0 w-full pb-5 cursor-pointer'>Contact</li>
                     </Link>
                 </ul>
             </div>

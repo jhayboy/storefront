@@ -3,8 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.cati::-webkit-scrollbar {
+    display: none;
+  }
+
 .description {
     animation: design 1s linear forwards;
+}
+.navslide {
+    animation: navslide 0.5s linear forwards;
 }
 .openstore {
     opacity: 0;
@@ -18,10 +25,31 @@
     opacity: 0;
     animation: explore 1s linear forwards;
 }
+.cartshow {
+    opacity: 0;
+    animation: explore 0.5s linear forwards;
+}
 .shoes {
     opacity: 0;
     animation: shoes 1s linear forwards .5s;
 }
+
+
+@keyframes navslide{
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-50%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 
 @keyframes design{
