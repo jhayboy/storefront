@@ -1,10 +1,7 @@
 import React from 'react'
 // import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
 import CellPhone from '../ProductCategory/CellPhone'
-import Trousers from '../ProductCategory/Trousers'
-import Tshirt from '../ProductCategory/Tshirt'
-import Shoes from '../ProductCategory/Shoes'
-import E
+// import Trousers from '../ProductCategory/Trousers'
 
 
 export default function Product(){  
