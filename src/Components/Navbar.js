@@ -24,7 +24,9 @@ export default function Navbar({handleCarts}) {
                 <Link to='/'>
                     <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Home</li>
                 </Link>
-                <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Store</li>
+                <Link to='/product'>
+                    <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Store</li>
+                </Link>
                 <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Luxury</li>
                 <Link to='/contactxshopino'>
                     <li className='cursor-pointer hover:text-[#cae96f] hover:scale-105'>Contact</li>

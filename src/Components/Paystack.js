@@ -54,7 +54,7 @@ const Paystack = ({values}) =>{
     publicKey,
     text: "Pay Now",
     onSuccess: () => setPaid(true),
-    onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+    onClose: () => alert("Wait! You need this, don't go!!!!"),
   }
     return (
         <div className="flex flex-col justify-center items-center w-full h-screen px-5 bg-[#f2f2f2]">

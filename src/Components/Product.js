@@ -1,10 +1,13 @@
 import React from 'react'
 // import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
-// import CellPhone from '../ProductCategory/CellPhone'
-// import Watch from '../Image/luxurywatch-removebg-preview.png'
+import CellPhone from '../ProductCategory/CellPhone'
+import Trousers from '../ProductCategory/Trousers'
+import Tshirt from '../ProductCategory/Tshirt'
+import Shoes from '../ProductCategory/Shoes'
+import E
 
 
-export default function Product(){
+export default function Product(){  
     return(
         <div className='bg-[rgb(245,245,245)] px-5 py-5'>
             <p className='font-bold text-xl'>Shop by Category</p>
@@ -61,6 +64,7 @@ export default function Product(){
                     </div>
                 </div>
                 {/* <IoIosArrowForward/> */}
+            <CellPhone/>
             </div>
         </div>
     )
