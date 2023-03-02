@@ -1,7 +1,7 @@
 export const sneak = [
     {
         id: "1",
-        images: "./Image/wireless3-min.png",
+        images: "./rod3set (1).png",
         name: "Brick Cage",
         price: 650,
         sold: "5839",
@@ -9,7 +9,7 @@ export const sneak = [
     },
     {
         id: "2",
-        images: "./Image/wirelessline-min.png",
+        images: "./rod3set (2).png",
         name: "Brick Cage",
         price: 7550,
         sold: "839",
@@ -17,7 +17,7 @@ export const sneak = [
     },
     {
         id: "3",
-        images: "./Image/wirelessgo3-min.png",
+        images: "./rod3set (3).png",
         name: "Brick Cage",
         price: 12050,
         sold: "39",
@@ -25,7 +25,7 @@ export const sneak = [
     },
     {
         id: "4",
-        images: "./Image/wirelessback-min.png",
+        images: "./rod3set (4).png",
         name: "Brick Cage",
         price: 17000,
         sold: "1239",
@@ -33,7 +33,7 @@ export const sneak = [
     },
     {
         id: "5",
-        images: "./Image/wireless3-min.png",
+        images: "./rod3set (5).png",
         name: "Brick Cage",
         price: 8000,
         sold: "59",

@@ -13,49 +13,49 @@ export default function Product(){
                 <div className='bg-white flex w-[900px] justify-between '>
                     <div className='flex flex-col justify-center items-center hover:scale-105 hover:shadow-xl px-2 py-3 gap-3 w-[127px]'>
                         <div className='bg-black rounded-2xl'>
-                            <img src="../luxurywatch-removebg-preview.png" alt='category' className='w-24'/>
+                            <img src="../exclusive-deals_220x220v2.png" alt='category' className='w-24'/>
                         </div>
                         <p className='text-sm'>Cell Phones</p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center hover:scale-105 hover:shadow-xl px-2 py-3 gap-3 w-[127px]'>
                         <div className='bg-black rounded-2xl'>
-                            <img src="../luxurywatch-removebg-preview.png" alt='category' className='w-24'/>
+                            <img src="../exclusive-deals_220x220v2.png" alt='category' className='w-24'/>
                         </div>
                         <p className='text-sm'>Wrist watch</p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center hover:scale-105 hover:shadow-xl px-2 py-3 gap-3 w-[127px]'>
                         <div className='bg-black rounded-2xl'>
-                            <img src="../luxurywatch-removebg-preview.png" alt='category' className='w-24'/>
+                            <img src="../exclusive-deals_220x220v2.png" alt='category' className='w-24'/>
                         </div>
                         <p className='text-sm'>Electronics</p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center hover:scale-105 hover:shadow-xl px-2 py-3 gap-3 w-[127px]'>
                         <div className='bg-black rounded-2xl'>
-                            <img src="../luxurywatch-removebg-preview.png" alt='category' className='w-24'/>
+                            <img src="../exclusive-deals_220x220v2.png" alt='category' className='w-24'/>
                         </div>
                         <p className='text-sm'>Shoes</p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center hover:scale-105 hover:shadow-xl px-2 py-3 gap-3 w-[127px]'>
                         <div className='bg-black rounded-2xl'>
-                            <img src="../luxurywatch-removebg-preview.png" alt='category' className='w-24'/>
+                            <img src="../exclusive-deals_220x220v2.png" alt='category' className='w-24'/>
                         </div>
                         <p className='text-sm'>T - Shirt</p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center hover:scale-105 hover:shadow-xl px-2 py-3 gap-3 w-[127px]'>
                         <div className='bg-black rounded-2xl'>
-                            <img src="../luxurywatch-removebg-preview.png" alt='category' className='w-24'/>
+                            <img src="../exclusive-deals_220x220v2.png" alt='category' className='w-24'/>
                         </div>
                         <p className='text-sm'>Jelweries</p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center hover:scale-105 hover:shadow-xl px-2 py-3 gap-3 w-[127px]'>
                         <div className='bg-black rounded-2xl'>
-                            <img src="../luxurywatch-removebg-preview.png" alt='category' className='w-24'/>
+                            <img src="../exclusive-deals_220x220v2.png" alt='category' className='w-24'/>
                         </div>
                         <p className='text-sm'>Trouser</p>
                     </div>
