@@ -1,7 +1,7 @@
 export const sneak = [
     {
         id: "1",
-        images: "./rod3set (1).png",
+        images: "../exclusive-deals_220x220v2.png",
         name: "Brick Cage",
         price: 650,
         sold: "5839",
@@ -9,7 +9,7 @@ export const sneak = [
     },
     {
         id: "2",
-        images: "./rod3set (2).png",
+        images: "../exclusive-deals_220x220v2.png",
         name: "Brick Cage",
         price: 7550,
         sold: "839",
@@ -17,7 +17,7 @@ export const sneak = [
     },
     {
         id: "3",
-        images: "./rod3set (3).png",
+        images: "../exclusive-deals_220x220v2.png",
         name: "Brick Cage",
         price: 12050,
         sold: "39",
@@ -25,7 +25,7 @@ export const sneak = [
     },
     {
         id: "4",
-        images: "./rod3set (4).png",
+        images: "../exclusive-deals_220x220v2.png",
         name: "Brick Cage",
         price: 17000,
         sold: "1239",
@@ -33,7 +33,7 @@ export const sneak = [
     },
     {
         id: "5",
-        images: "./rod3set (5).png",
+        images: "../exclusive-deals_220x220v2.png",
         name: "Brick Cage",
         price: 8000,
         sold: "59",
