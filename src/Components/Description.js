@@ -1,9 +1,7 @@
 import React from "react"
 
-export default function Description({desTrig, handleAddItem}){
-    const handleClear = (desTrig) => {
-        handleAddItem(desTrig)
-    }
+export default function Description({desTrig}){
+    
     return(
         <div className=" bg-white px-5 py-5 gap-3 md:grid md:grid-cols-2">
             <div className="flex justify-center items-center">
@@ -14,7 +12,7 @@ export default function Description({desTrig, handleAddItem}){
                 <p>{desTrig.description}</p>
                 <p className="font-bold text-lg">&#8358;{desTrig.price.toLocaleString()}</p>
                 <div >
-                    <button onClick={handleClear} className="bg-[#222222] mt-3 px-3 py-2 rounded-lg font-bold text-white">Buy Now</button>
+                    <button className="bg-[#222222] mt-3 px-3 py-2 rounded-lg font-bold text-white">Buy Now</button>
                 </div>
             </div>
         </div>
