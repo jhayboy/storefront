@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react' 
-import {SiCarthrottle} from 'react-icons/si'
 // import emailjs from '@emailjs/browser';
 import {useNavigate} from "react-router-dom"
 // import { ItemsContext } from '../CartContext/ItemsContext';
@@ -33,13 +32,11 @@ export default function Shipping({values, setValues}) {
             <form  className='px-5 w-[400px]'>
                 <div className='flex justify-between items-center w-full '>
                     <div className='flex justify-center items-center gap-1 mb-5'>
-                        <SiCarthrottle size={30} className="text-black"/>
                         <p className='font-semibold text-black'>Xshopino</p>
                     </div>
                 </div>
                 <div className=" flex flex-col w-full">
                     <p className="font-semibold mt-5 mb-5">Shipping Address</p>
-                    
                         <label className='mt-2'>Address</label>
                         <input 
                         className="mt-1 border outline-none border-black w-full px-2 py-1 rounded-md"

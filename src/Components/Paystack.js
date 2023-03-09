@@ -2,18 +2,18 @@ import React, {useState, useContext, useEffect} from "react"
 import { useNavigate } from "react-router-dom";
 import { PaystackButton } from 'react-paystack'
 import emailjs from '@emailjs/browser';
-import {SiCarthrottle} from 'react-icons/si'
 import { TotalContext } from "../CartContext/TotalContext";
 import { CartContext } from "../CartContext/CartContext";
 import {AiOutlineLoading3Quarters} from 'react-icons/ai'
+import {BsCheckCircle} from 'react-icons/bs'
 
-
+// process.env.REACT_APP_PAYSTACK_API_KEY
 const Paystack = ({values}) =>{
   const {cartitem} = useContext(CartContext)
   const cartinfo = JSON.stringify(cartitem)
   const {total} = useContext(TotalContext)
   const navigate = useNavigate()
-  const publicKey = process.env.REACT_APP_PAYSTACK_API_KEY
+  const publicKey = 'pk_test_3d0512a0e2294a19429257c354e7829b15633cf8'
   const amount = total * 100 // Remember, set in kobo!
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
@@ -61,14 +61,13 @@ const Paystack = ({values}) =>{
             <div className="checkout-form w-[375px] flex flex-col justify-center items-center px-5">
               <div className='flex justify-between items-center w-full '>
                   <div className='flex justify-center items-center gap-1 mb-5'>
-                      <SiCarthrottle size={30} className="text-black"/>
                       <p className='font-semibold text-black'>Xshopino</p>
                   </div>
               </div>
               <div className={paid ? "fixed top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-black/80 " : "hidden"}>
-                <div className="fixed w-[70%] md:w-[50%] px-5 py-20 bg-white flex flex-col justify-center items-center gap-2">
+                <div className="fixed w-[70%] md:w-[50%] px-5 py-20 rounded-2xl bg-white flex flex-col justify-center items-center gap-2">
+                  <BsCheckCircle size={25}/>
                   <div className="flex gap-1 items-center"> 
-                    <SiCarthrottle size={30} className="text-black"/>
                     <p className='font-semibold text-black'>Xshopino</p>
                   </div>
                   <p>Thanks for the purchase, we hope to see you again</p>

@@ -2,7 +2,8 @@ import React, {useState, useContext, useEffect} from 'react'
 import {Link} from "react-router-dom"
 import { sneak } from './SneakersData'
 import {GiAmmoBox} from "react-icons/gi"
-import {BsBag} from "react-icons/bs"
+import {BsBag, BsWhatsapp} from "react-icons/bs"
+import {AiOutlineInstagram} from "react-icons/ai"
 // import {MdDelete} from "react-icons/md"
 // import {HiMinus} from "react-icons/hi"
 // import {IoMdAdd} from "react-icons/io"
@@ -93,6 +94,8 @@ export default function Storefront({carts, handleCarts}) {
         }
     }
 
+    
+
   return (
     // THE HERO SECTION THAT HAS A BG OF KINDA BLACK
     <div className=' w-full' >
@@ -126,7 +129,7 @@ export default function Storefront({carts, handleCarts}) {
         {/* Product section */}
         <div className='bg-[#f2f2f2] py-3  px-10'>
             <div className='md:flex  md:justify-between w-full md:items-center'>
-                <p className='sm:mb-2 font-semibold text-3xl mr-auto'>New arrival</p>
+                <p className='sm:mb-2 font-semibold text-3xl mr-auto'>Luxury</p>
                 <div className='flex items-center gap-2'>
                     <p className='font-semibold text-xs'>All Product</p>
                     <div className='bg-black p-1 rounded-md text-slate-300'>
@@ -162,7 +165,6 @@ export default function Storefront({carts, handleCarts}) {
                                         <p>{product.name}</p>
                                         <button onClick={handleAddItem} className='px-1 rounded-lg mt-2 font-semibold flex justify-center items-center gap-2 border border-black'>
                                             <p>Add to card</p>
-                                            <div className='w-1 h-1 rounded-full bg-[#222222] animate-ping'></div>
                                         </button>  
                                     </div>
                                     <div className='flex flex-col justify-center items-end'>
@@ -189,8 +191,17 @@ export default function Storefront({carts, handleCarts}) {
 
         {/* THE DESCRIPTION THAT AT THE BOTTOM OF THE PAGE */}
         <div className='w-screen h-full px-5 py-5 gap-3 flex justify-center items-center'>
-            {sneak.find((product) => product === desTrig) ? <Description desTrig={desTrig}/> : null}
+            {sneak.find((product) => product === desTrig) ? <Description desTrig={desTrig} handleAddItem={handleAddItem}/> : null}
         </div>
+        <footer className="bg-gray-900 py-4">
+            <div className="container mx-auto px-4">
+                <p className="text-gray-500 text-center">Copyright &copy; 2023</p>
+            <div className='text-gray-500 mt-3 gap-3 flex justify-center items-center'>
+                <AiOutlineInstagram size={20}/>
+                <BsWhatsapp/>
+            </div>
+            </div>
+        </footer>
               
 
 

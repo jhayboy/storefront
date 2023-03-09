@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react"
-import {SiCarthrottle} from "react-icons/si"
 import {AiOutlineRollback, AiOutlineLoading3Quarters} from 'react-icons/ai'
 import emailjs from '@emailjs/browser';
 import {useNavigate, Link} from 'react-router-dom'
@@ -33,7 +32,6 @@ export default function Contact(){
     return (
     <div className="flex flex-col items-center justify-center h-screen bg-[#222222] px-8">
         <div className='flex justify-center items-center gap-1 text-[#cae96f] mb-3'>
-            <SiCarthrottle size={40} />
             <p className='font-semibold text-2xl '>Xshopino Support</p>
         </div> 
       <p className="text-white mb-8 text-center">Need help with a product? Please contact us using the form below:</p>

@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react'
 import {Link} from 'react-router-dom'
-import {SiCarthrottle} from "react-icons/si"
 import {BsBag} from "react-icons/bs"
 import {GiHamburgerMenu} from "react-icons/gi"
 import {GrFormClose} from "react-icons/gr"
@@ -16,8 +15,9 @@ export default function Navbar({handleCarts}) {
   return (
     <div className='flex justify-between bg-[#222222] px-5 py-3 sticky top-0 z-10 text-white items-center'>
         <div className='flex justify-center items-center gap-1'>
-            <SiCarthrottle size={30}/>
-            <p className='font-semibold'>Xshopino</p>
+            <Link to="/">
+                <p className='font-semibold'>Xshopino</p>
+            </Link>
         </div>
         <div className='hidden md:flex'>
             <ul className='flex gap-4'>
@@ -46,7 +46,6 @@ export default function Navbar({handleCarts}) {
         <div className={bars ? 'hidden' : 'navslide fixed px-3 left-0 top-0 bottom-0 py-3 bg-white w-[70%] h-full z-10 flex flex-col items-center md:hidden'}>
             <div className='flex justify-between items-center w-full'>
                 <div className='flex justify-center items-center gap-1'>
-                    <SiCarthrottle size={30} className="text-black"/>
                     <p className='font-semibold text-black'>Xshopino</p>
                 </div>
                 
