@@ -32,7 +32,7 @@ export default function Shipping({values, setValues}) {
             <form  className='px-5 w-[400px]'>
                 <div className='flex justify-between items-center w-full '>
                     <div className='flex justify-center items-center gap-1 mb-5'>
-                        <p className='font-semibold text-black'>Xshopino</p>
+                        <p className='font-semibold text-black'>MBCFrames</p>
                     </div>
                 </div>
                 <div className=" flex flex-col w-full">

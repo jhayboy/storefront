@@ -32,7 +32,7 @@ export default function Contact(){
     return (
     <div className="flex flex-col items-center justify-center h-screen bg-[#222222] px-8">
         <div className='flex justify-center items-center gap-1 text-[#cae96f] mb-3'>
-            <p className='font-semibold text-2xl '>Xshopino Support</p>
+            <p className='font-semibold text-2xl '>MBC Frame Support</p>
         </div> 
       <p className="text-white mb-8 text-center">Need help with a product? Please contact us using the form below:</p>
       <form className="w-full max-w-sm">

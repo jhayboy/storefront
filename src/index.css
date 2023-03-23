@@ -1,41 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+.mbc {
+    background-image: url("../public/original.webp");
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+/* .main-image {
+    filter:none;
+    -webkit-filter: none;
+} */
 .cati::-webkit-scrollbar {
     display: none;
   }
 
-.description {
-    animation: design 1s linear forwards;
+  
+.name{
+    position: relative;
+    margin: 0;
+    padding: 50px 10px;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid white;
 }
-.navslide {
-    animation: navslide 0.5s linear forwards;
-}
-.openstore {
-    opacity: 0;
-    animation: store 1s linear forwards .5s;
-}
-.explore {
-    opacity: 0;
-    animation: explore 1s linear forwards .5s;
-}
-.sales {
-    opacity: 0;
-    animation: explore 1s linear forwards;
-}
-.cartshow {
-    opacity: 0;
-    animation: explore 0.5s linear forwards;
-}
-.shoes {
-    opacity: 0;
-    animation: shoes 1s linear forwards .5s;
+.name h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
+.name1 .name2{
+    padding: 0;
+    margin: 0;
+    height: fit-content;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.rotate {
+    position: absolute;
+    background-color: white;
+    width: 7px;
+    height: 7px;
+    top: 0;
+    right: 0;
+}
+.rotate {
+    animation: rotate 3s linear infinite;
+}
+.name1 {
+    animation: namer 1s linear forwards 0.5s;
+}
 
-@keyframes navslide{
+.name2 {
+    animation: namers 1s linear forwards 0.5s;
+}
+
+@keyframes namer{
     0% {
         transform: translateX(-100%);
         opacity: 0;
@@ -50,37 +83,7 @@
     }
 }
 
-
-
-@keyframes design{
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(-50%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes store {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(-50%);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes explore {
+@keyframes namers{
     0% {
         transform: translateX(100%);
         opacity: 0;
@@ -91,20 +94,6 @@
     }
     100% {
         transform: translateX(0);
-        opacity: 1;
-    }
-}
-@keyframes shoes {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(20px);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(0);
         opacity: 1;
     }
 }

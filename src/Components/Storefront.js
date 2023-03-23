@@ -1,21 +1,23 @@
 import React, {useState, useContext, useEffect} from 'react'
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 import { sneak } from './SneakersData'
+import Footer from './Footer'
 import {GiAmmoBox} from "react-icons/gi"
-import {BsBag, BsWhatsapp} from "react-icons/bs"
-import {AiOutlineInstagram} from "react-icons/ai"
-// import {MdDelete} from "react-icons/md"
+import {BsBag} from "react-icons/bs"
+// import {AiOutlineInstagram} from "react-icons/ai"
+import {MdOutlineCancel} from "react-icons/md"
 // import {HiMinus} from "react-icons/hi"
 // import {IoMdAdd} from "react-icons/io"
-import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs"
+// import {BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs"
 import { CartContext } from '../CartContext/CartContext'
 import { TotalContext } from '../CartContext/TotalContext'
 import Description from './Description'
 import CartItems from './CartItems'
 
 export default function Storefront({carts, handleCarts}) {
+    const [show, setShow] = useState(true)
     const {setTotal} = useContext(TotalContext)
-    const [currentIndex, setCurrentIndex] = useState(2)
+    // const [currentIndex, setCurrentIndex] = useState(2)
     const {setCartitem} = useContext(CartContext)
     const [desTrig, setDesTrig] = useState(null)
    
@@ -49,24 +51,25 @@ export default function Storefront({carts, handleCarts}) {
     }
     const handleDes = (product) => {
         setDesTrig(product)
+        setShow(!show)
     }
 
-    const prevImage = () => {
-        if (currentIndex === sneak.length - 1) {
-            setCurrentIndex(0);
-        } else {
-            setCurrentIndex(currentIndex + 1);
-        }
+    // const prevImage = () => {
+    //     if (currentIndex === sneak.length - 1) {
+    //         setCurrentIndex(0);
+    //     } else {
+    //         setCurrentIndex(currentIndex + 1);
+    //     }
        
-    }
+    // }
     
-    const nextImage = () => {
-        if (currentIndex === 0) {
-            setCurrentIndex(sneak.length - 1);
-        } else {
-            setCurrentIndex(currentIndex - 1);
-        }
-    }
+    // const nextImage = () => {
+    //     if (currentIndex === 0) {
+    //         setCurrentIndex(sneak.length - 1);
+    //     } else {
+    //         setCurrentIndex(currentIndex - 1);
+    //     }
+    // }
     
 
     // FUNCTION THAT ADDS ITEM TO THE CART AND IT KEEPS INCREASING THE QUANTITY WHEN YOU KEEP CLICKING ON THE PRODUCT
@@ -98,41 +101,22 @@ export default function Storefront({carts, handleCarts}) {
 
   return (
     // THE HERO SECTION THAT HAS A BG OF KINDA BLACK
-    <div className=' w-full' >
+    <div className='w-full scroll-smooth' >
         {/* the banner section  */}
-        <div className='w-full bg-[#222222] flex flex-col justify-center items-center'>
-            <p className='description font-semibold text-4xl text-white text-center tracking-wide'>Design & high quality</p>
-            <p className='sales text-center my-5 text-white'>Sales of high-quality branded sneakers in a wide range with unique designs</p>
-            <div className='my-5 flex gap-3'>
-                
-                <Link to='/product'>
-                    <button className='openstore bg-[#cae96f] p-2 px-3 rounded-full text-xs'>Open Store</button>
-                </Link>
-                <button className='explore border border-[#cae96f] text-[#cae96f] p-2 rounded-full text-xs'>Explore More</button>
-            </div>
-            <div className='bg-white rounded-xl p-2 hidden md:block'>
-                <p className='text-[#cae96f] text-2xl font-semibold'>50+</p>
-                <p className='text-xs'>types with a<br/> unique design</p>
-            </div>
-            <div className='h-full flex items-center '>
-                <BsFillArrowLeftCircleFill onClick={prevImage} size={20} className='text-white cursor-pointer'/>
-                <div className='shoes flex h-full w-40 gap-5 items-end  mx-10'>
-                   {sneak.map((item, index) => {
-                    return(
-                        <img key={index} src={item.images} alt="a Sneakers" style={{ display: index === currentIndex ? "block" : "none" }} className="w-40 h-40 object-cover mt-10 mb-10"/>
-                    )
-                   })}
-                </div>
-                <BsFillArrowRightCircleFill onClick={nextImage} size={20} className='text-white cursor-pointer'/>
+        <div className='bg-[#222222] h-[70vh] w-full flex justify-center items-center'>
+            <div class="name w-[200px] h-[330px]">
+                <h3 class="name1 font-bold text-2xl">MBC</h3>
+                <h3 class="name2 font-bold text-2xl">FRAMES</h3>
             </div>
         </div>
+
         {/* Product section */}
         <div className='bg-[#f2f2f2] py-3  px-10'>
             <div className='md:flex  md:justify-between w-full md:items-center'>
-                <p className='sm:mb-2 font-semibold text-3xl mr-auto'>Luxury</p>
+                <a href='#frame' ><p className='sm:mb-2 font-semibold text-3xl mr-auto'>Reflection</p></a>
                 <div className='flex items-center gap-2'>
                     <p className='font-semibold text-xs'>All Product</p>
-                    <div className='bg-black p-1 rounded-md text-slate-300'>
+                    <div className='bg-black text-white p-1 rounded-md text-slate-300'>
                     <GiAmmoBox size={20}/>  
                     </div>
                 </div>
@@ -153,7 +137,7 @@ export default function Storefront({carts, handleCarts}) {
                     {/* mapping through the product items and display them on the screen */}
                     {sneak.map((product) => {
                         return(
-                            <div key={product.id} onClick={() => handleAddItem(product)} className='flex flex-col justify-center items-center mt-4'>
+                            <div key={product.id}  className='flex flex-col justify-center items-center mt-4'>
                                 <div className='bg-white rounded-xl w-full flex flex-col justify-center items-center h-60 '>
                                     {/* <div onClick={() => handleClick(product)} className="w-full flex justify-end p-3">
                                         {watch === product ? <AiFillHeart size={25}/> : <AiOutlineHeart size={25}/>}
@@ -163,7 +147,7 @@ export default function Storefront({carts, handleCarts}) {
                                 <div className='flex justify-between w-full py-4'>
                                     <div>
                                         <p>{product.name}</p>
-                                        <button onClick={handleAddItem} className='px-1 rounded-lg mt-2 font-semibold flex justify-center items-center gap-2 border border-black'>
+                                        <button onClick={() => handleAddItem(product)} className='px-1 rounded-lg mt-2 font-semibold flex justify-center items-center gap-2 border border-black'>
                                             <p>Add to card</p>
                                         </button>  
                                     </div>
@@ -180,6 +164,47 @@ export default function Storefront({carts, handleCarts}) {
                     })}
                 </div>
             </div>
+
+            <section id='frame' className='md:flex  md:justify-between w-full md:items-center mt-20'>
+                <p className='sm:mb-2 font-semibold text-3xl mr-auto'>Frames</p>
+                <div className='flex items-center gap-2'>
+                    <p className='font-semibold text-xs'>All Product</p>
+                    <div className='bg-black p-1 rounded-md text-slate-300'>
+                    <GiAmmoBox size={20}/>  
+                    </div>
+                </div>
+            </section>
+
+            <div className='md:grid md:grid-cols-4 gap-5'>
+                    {/* mapping through the product items and display them on the screen */}
+                    {sneak.map((product) => {
+                        return(product.types === "frames" ?
+                            <div key={product.id}  className='flex flex-col justify-center items-center mt-4'>
+                                <div className='bg-white rounded-xl w-full flex flex-col justify-center items-center h-60 '>
+                                    {/* <div onClick={() => handleClick(product)} className="w-full flex justify-end p-3">
+                                        {watch === product ? <AiFillHeart size={25}/> : <AiOutlineHeart size={25}/>}
+                                    </div> */}
+                                    <img onClick={() => handleDes(product)} className='w-40 h-40 object-cover' src={product.images} alt="name"/>
+                                </div>
+                                <div className='flex justify-between w-full py-4'>
+                                    <div>
+                                        <p>{product.name}</p>
+                                        <button onClick={() => handleAddItem(product)} className='px-1 rounded-lg mt-2 font-semibold flex justify-center items-center gap-2 border border-black'>
+                                            <p>Add to card</p>
+                                        </button>  
+                                    </div>
+                                    <div className='flex flex-col justify-center items-end'>
+                                        <p className='font-semibold '>&#8358;{product.price?.toLocaleString()}</p>
+                                        <div className='mt-2 flex justify-center items-center p-1'>
+                                            <p className='text-sm text-slate-400'>{(product.sold).toLocaleString()} sold</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> : ""
+                        )
+                    })}
+                </div>
         </div>
                 <div onClick={handleCarts} className='bg-black rounded-lg p-1 fixed bottom-10 right-10 md:hidden animate-bounce'>
                     <BsBag className='text-white'/>
@@ -190,18 +215,11 @@ export default function Storefront({carts, handleCarts}) {
 
 
         {/* THE DESCRIPTION THAT AT THE BOTTOM OF THE PAGE */}
-        <div className='w-screen h-full px-5 py-5 gap-3 flex justify-center items-center'>
+        <div className={show ? "hidden" : "fixed bg-black/50 top-0 left-0 right-0 bottom-0 px-5 py-5 gap-3 flex flex-col justify-center"}>
+            <MdOutlineCancel onClick={() => setShow(!show)} size={25} className="text-white"/>
             {sneak.find((product) => product === desTrig) ? <Description desTrig={desTrig} handleAddItem={handleAddItem}/> : null}
         </div>
-        <footer className="bg-gray-900 py-4">
-            <div className="container mx-auto px-4">
-                <p className="text-gray-500 text-center">Copyright &copy; 2023</p>
-            <div className='text-gray-500 mt-3 gap-3 flex justify-center items-center'>
-                <AiOutlineInstagram size={20}/>
-                <BsWhatsapp/>
-            </div>
-            </div>
-        </footer>
+        <Footer/>
               
 
 

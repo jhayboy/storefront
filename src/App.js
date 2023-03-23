@@ -51,7 +51,7 @@ function App() {
               <Routes>
                 <Route path='/' element={<Home carts={carts} handleCarts={handleCarts}/>}/>
                 <Route path='/paynow' element={<Paystack values={values}/>}/>
-                <Route path='/contactxshopino' element={<Contact/>}/>
+                <Route path='/contactmbc' element={<Contact/>}/>
                 <Route path='/product' element={<Product/>}/>
                 <Route path='/shipping' element={<Shipping setValues={setValues} values={values}/>}/>
               </Routes>

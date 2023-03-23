@@ -1,6 +1,6 @@
 import React from 'react'
 // import {IoIosArrowBack, IoIosArrowForward} from 'react-icons/io'
-import CellPhone from '../ProductCategory/CellPhone'
+// import CellPhone from '../ProductCategory/CellPhone'
 // import Trousers from '../ProductCategory/Trousers'
 
 
@@ -61,7 +61,7 @@ export default function Product(){
                     </div>
                 </div>
                 {/* <IoIosArrowForward/> */}
-            <CellPhone/>
+            {/* <CellPhone/> */}
             </div>
         </div>
     )

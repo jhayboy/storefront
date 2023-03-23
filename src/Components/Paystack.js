@@ -61,14 +61,14 @@ const Paystack = ({values}) =>{
             <div className="checkout-form w-[375px] flex flex-col justify-center items-center px-5">
               <div className='flex justify-between items-center w-full '>
                   <div className='flex justify-center items-center gap-1 mb-5'>
-                      <p className='font-semibold text-black'>Xshopino</p>
+                      <p className='font-semibold text-black'>MBCFrames</p>
                   </div>
               </div>
               <div className={paid ? "fixed top-0 bottom-0 right-0 left-0 flex justify-center items-center bg-black/80 " : "hidden"}>
                 <div className="fixed w-[70%] md:w-[50%] px-5 py-20 rounded-2xl bg-white flex flex-col justify-center items-center gap-2">
                   <BsCheckCircle size={25}/>
                   <div className="flex gap-1 items-center"> 
-                    <p className='font-semibold text-black'>Xshopino</p>
+                    <p className='font-semibold text-black'>MBCFrames</p>
                   </div>
                   <p>Thanks for the purchase, we hope to see you again</p>
                   <button onClick={submitDetails} className="bg-[#222222] w-[50%] mt-3 px-2 py-2 rounded-lg font-semibold text-white flex justify-center items-center">{loading ? <AiOutlineLoading3Quarters className="animate-spin"/> : "Continue"}</button>
