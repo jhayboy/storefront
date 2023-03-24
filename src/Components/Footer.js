@@ -7,7 +7,7 @@ const Footer = () => {
     <div>
         <footer className="bg-gray-900 py-4 w-screen">
             <div className="container mx-auto px-4">
-                <p className="text-gray-500 text-center">Copyright &copy; 2023 MBC FRAMES. All rights reserved.</p>
+                <p className="text-gray-500 text-center">Copyright &copy; 2023 MBC FRAME. All rights reserved.</p>
             <div className='text-gray-500 mt-3 gap-3 flex justify-center items-center'>
                 <AiOutlineInstagram size={20}/>
                 <BsWhatsapp/>

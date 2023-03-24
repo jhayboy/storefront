@@ -45,7 +45,7 @@ export default function Navbar({handleCarts}) {
         <div className={bars ? 'hidden' : 'navslide fixed px-3 left-0 top-0 bottom-0 py-3 bg-white w-[70%] h-full z-10 flex flex-col items-center md:hidden'}>
             <div className='flex justify-between items-center w-full'>
                 <div className='flex justify-center items-center gap-1'>
-                    <p className='font-semibold text-black'>MBCFrames</p>
+                    <p className='font-semibold text-black'>MBCFRAME</p>
                 </div>
                 
             </div>

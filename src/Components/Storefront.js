@@ -106,7 +106,7 @@ export default function Storefront({carts, handleCarts}) {
         <div className='bg-[#222222] h-[70vh] w-full flex justify-center items-center'>
             <div class="name w-[200px] h-[330px]">
                 <h3 class="name1 font-bold text-2xl">MBC</h3>
-                <h3 class="name2 font-bold text-2xl">FRAMES</h3>
+                <h3 class="name2 font-bold text-2xl">FRAME</h3>
             </div>
         </div>
 
@@ -215,9 +215,9 @@ export default function Storefront({carts, handleCarts}) {
 
 
         {/* THE DESCRIPTION THAT AT THE BOTTOM OF THE PAGE */}
-        <div className={show ? "hidden" : "fixed bg-black/50 top-0 left-0 right-0 bottom-0 px-5 py-5 gap-3 flex flex-col justify-center"}>
-            <MdOutlineCancel onClick={() => setShow(!show)} size={25} className="text-white"/>
-            {sneak.find((product) => product === desTrig) ? <Description desTrig={desTrig} handleAddItem={handleAddItem}/> : null}
+        <div className={show ? "hidden" : "fixed bg-black/50 top-0 left-0 right-0 bottom-0 px-5 py-5 gap-3 flex flex-col justify-center h-screen"}>
+            {sneak.find((product) => product === desTrig) ? <Description setShow={setShow} desTrig={desTrig} show={show} handleAddItem={handleAddItem}/> : null}
+            
         </div>
         <Footer/>
               

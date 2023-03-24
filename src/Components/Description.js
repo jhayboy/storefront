@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Description({desTrig}){
+export default function Description({desTrig, show, setShow}){
     
     return(
         <div className=" bg-white px-5 py-5 gap-3 md:grid md:grid-cols-2">
@@ -15,7 +15,7 @@ export default function Description({desTrig}){
                 <p>free shipping &#x1F69A;</p>
                 <p>Will be delivered as frames in the picture</p>
                 <div >
-                    <button className="bg-[#222222] mt-3 px-3 py-2 rounded-lg font-bold text-white">Buy Now</button>
+                    <button onClick={()=> setShow(!show)} className="bg-[#222222] mt-3 px-3 py-2 rounded-lg font-bold text-white">Exit</button>
                 </div>
             </div>
         </div>
