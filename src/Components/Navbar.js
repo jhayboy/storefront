@@ -18,7 +18,7 @@ export default function Navbar({handleCarts}) {
     <div className='flex justify-between bg-[#222222] px-5 py-3 sticky top-0 z-10 text-white items-center'>
         <div className='flex justify-center items-center gap-1'>
             <Link to="/">
-                <p className='font-semibold'>MBCFrames</p>
+                <p className='font-semibold'>MBC FRAMES</p>
             </Link>
         </div>
         <div className='hidden md:flex'>

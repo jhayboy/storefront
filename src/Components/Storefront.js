@@ -136,7 +136,7 @@ export default function Storefront({carts, handleCarts}) {
                 <div className='md:grid md:grid-cols-4 gap-5'>
                     {/* mapping through the product items and display them on the screen */}
                     {sneak.map((product) => {
-                        return(
+                        return(product.types === "mirror" ?
                             <div key={product.id}  className='flex flex-col justify-center items-center mt-4'>
                                 <div className='bg-white rounded-xl w-full flex flex-col justify-center items-center h-60 '>
                                     {/* <div onClick={() => handleClick(product)} className="w-full flex justify-end p-3">
@@ -159,7 +159,7 @@ export default function Storefront({carts, handleCarts}) {
                                     </div>
                                 </div>
 
-                            </div>
+                            </div> : ""
                         )
                     })}
                 </div>
