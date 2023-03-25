@@ -112,6 +112,49 @@ export default function Storefront({carts, handleCarts}) {
 
         {/* Product section */}
         <div className='bg-[#f2f2f2] py-3  px-10'>
+
+        <section id='frame' className='md:flex  md:justify-between w-full md:items-center mt-20'>
+                <p className='sm:mb-2 font-semibold text-3xl mr-auto'>Frames</p>
+                <div className='flex items-center gap-2'>
+                    <p className='font-semibold text-xs'>All Product</p>
+                    <div className='bg-black p-1 rounded-md text-slate-300'>
+                    <GiAmmoBox size={20}/>  
+                    </div>
+                </div>
+            </section>
+
+        <div className='md:grid md:grid-cols-4 gap-5'>
+                    {/* mapping through the product items and display them on the screen */}
+                    
+                    {sneak.map((product) => {
+                        return(product.types === "open" ?
+                            <div key={product.id}  className='flex flex-col justify-center items-center mt-4'>
+                                <div className='bg-white rounded-xl w-full flex flex-col justify-center items-center h-60 '>
+                                    {/* <div onClick={() => handleClick(product)} className="w-full flex justify-end p-3">
+                                        {watch === product ? <AiFillHeart size={25}/> : <AiOutlineHeart size={25}/>}
+                                    </div> */}
+                                    <img onClick={() => handleDes(product)} className='w-40 h-40 object-cover' src={product.images} alt="name"/>
+                                </div>
+                                <div className='flex justify-between w-full py-4'>
+                                    <div>
+                                        <p>{product.name}</p>
+                                        <button onClick={() => handleAddItem(product)} className='px-1 rounded-lg mt-2 font-semibold flex justify-center items-center gap-2 border border-black'>
+                                            <p>Add to card</p>
+                                        </button>  
+                                    </div>
+                                    <div className='flex flex-col justify-center items-end'>
+                                        <p className='font-semibold '>&#8358;{product.price?.toLocaleString()}</p>
+                                        <div className='mt-2 flex justify-center items-center p-1'>
+                                            <p className='text-sm text-slate-400'>{(product.sold).toLocaleString()} sold</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> : ""
+                        )
+                    })}
+                </div>
+            
             <div className='md:flex  md:justify-between w-full md:items-center'>
                 <a href='#frame' ><p className='sm:mb-2 font-semibold text-3xl mr-auto'>Reflection</p></a>
                 <div className='flex items-center gap-2'>
@@ -135,6 +178,7 @@ export default function Storefront({carts, handleCarts}) {
                 
                 <div className='md:grid md:grid-cols-4 gap-5'>
                     {/* mapping through the product items and display them on the screen */}
+                    
                     {sneak.map((product) => {
                         return(product.types === "mirror" ?
                             <div key={product.id}  className='flex flex-col justify-center items-center mt-4'>

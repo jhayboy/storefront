@@ -111,10 +111,50 @@ export const sneak = [
         id: "12",
         images: "https://i.pinimg.com/564x/f6/31/51/f63151432785523f061a5d5088bbeffc.jpg",
         name: "Push & Pull Wall Art | How To Hide a Fuse Panel",
-        price: 35000,
+        price: 28000,
         sold: 25,
         types: "frames",
-        size: " height 24' width 36'",
+        size: " height 16' width 24'",
+        description: "Large canvas wall art turns any blank area into an eye-catching display, all while lending gallery-worthy appeal to your abode. Just take a look at our vintage hangings for example. Each piece of home decor paintings is printed on canvas, then wrapped around a frame. Wall art prints arrive ready to hang so you can brighten up your room in several minutes."
+    },
+    {
+        id: "13",
+        images: "https://www.pinterest.com/pin/188166090673799953/",
+        name: "Golden Areal Push & Pull Wall Art",
+        price: 35000,
+        sold: 100,
+        types: "open",
+        size: " height 20' width 24'",
+        description: "Large canvas wall art turns any blank area into an eye-catching display, all while lending gallery-worthy appeal to your abode."
+    },
+    {
+        id: "14",
+        images: "https://i.pinimg.com/564x/0e/fa/7e/0efa7e39de0a59894331a9dd86ece3d4.jpg",
+        name: "Golden Areal Push & Pull Wall Art",
+        price: 35000,
+        sold: 22,
+        types: "open",
+        size: " height 20' width 24'",
+        description: "Large canvas wall art turns any blank area into an eye-catching display, all while lending gallery-worthy appeal to your abode."
+    },
+    {
+        id: "15",
+        images: "https://i.pinimg.com/564x/8d/82/26/8d8226dadc4f0ec601dd25146995fb3f.jpg",
+        name: "Golden Areal Push & Pull Wall Art Decor",
+        price: 35000,
+        sold: 63,
+        types: "open",
+        size: " height 20' width 24'",
+        description: "Large canvas wall art turns any blank area into an eye-catching display, all while lending gallery-worthy appeal to your abode. Just take a look at our vintage hangings for example. Each piece of home decor paintings is printed on canvas, then wrapped around a frame. Wall art prints arrive ready to hang so you can brighten up your room in several minutes."
+    },
+    {
+        id: "16",
+        images: "https://i.pinimg.com/564x/4e/fa/e4/4efae497b79c43ba2f2805e88072ffbf.jpg",
+        name: "Golden Areal Push & Pull Wall Art Decor",
+        price: 35000,
+        sold: 49,
+        types: "open",
+        size: " height 20' width 24'",
         description: "Large canvas wall art turns any blank area into an eye-catching display, all while lending gallery-worthy appeal to your abode. Just take a look at our vintage hangings for example. Each piece of home decor paintings is printed on canvas, then wrapped around a frame. Wall art prints arrive ready to hang so you can brighten up your room in several minutes."
     },
 ]
