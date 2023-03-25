@@ -119,7 +119,7 @@ export const sneak = [
     },
     {
         id: "13",
-        images: "https://www.pinterest.com/pin/188166090673799953/",
+        images: "https://i.pinimg.com/564x/06/fa/66/06fa66eb43fb4e57a543712c4676d276.jpg",
         name: "Golden Areal Push & Pull Wall Art",
         price: 35000,
         sold: 100,
