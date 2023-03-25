@@ -114,11 +114,11 @@ export default function Storefront({carts, handleCarts}) {
         <div className='bg-[#f2f2f2] py-3  px-10'>
 
         <section id='frame' className='md:flex  md:justify-between w-full md:items-center mt-20'>
-                <p className='sm:mb-2 font-semibold text-3xl mr-auto'>Frames</p>
+                <p className='sm:mb-2 font-semibold text-3xl mr-auto'>Open n' Close</p>
                 <div className='flex items-center gap-2'>
                     <p className='font-semibold text-xs'>All Product</p>
                     <div className='bg-black p-1 rounded-md text-slate-300'>
-                    <GiAmmoBox size={20}/>  
+                    <GiAmmoBox className="text-white" size={20}/>  
                     </div>
                 </div>
             </section>
@@ -160,7 +160,7 @@ export default function Storefront({carts, handleCarts}) {
                 <div className='flex items-center gap-2'>
                     <p className='font-semibold text-xs'>All Product</p>
                     <div className='bg-black text-white p-1 rounded-md text-slate-300'>
-                    <GiAmmoBox size={20}/>  
+                    <GiAmmoBox className="text-white" size={20}/>  
                     </div>
                 </div>
             </div>
@@ -214,7 +214,7 @@ export default function Storefront({carts, handleCarts}) {
                 <div className='flex items-center gap-2'>
                     <p className='font-semibold text-xs'>All Product</p>
                     <div className='bg-black p-1 rounded-md text-slate-300'>
-                    <GiAmmoBox size={20}/>  
+                    <GiAmmoBox className='text-white' size={20}/>  
                     </div>
                 </div>
             </section>
