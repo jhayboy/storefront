@@ -139,7 +139,7 @@ export default function Storefront({carts, handleCarts}) {
                                     <div>
                                         <p>{product.name}</p>
                                         <button onClick={() => handleAddItem(product)} className='px-1 rounded-lg mt-2 font-semibold flex justify-center items-center gap-2 border border-black'>
-                                            <p>Add to card</p>
+                                            <p>Add to cart</p>
                                         </button>  
                                     </div>
                                     <div className='flex flex-col justify-center items-end'>
@@ -192,7 +192,7 @@ export default function Storefront({carts, handleCarts}) {
                                     <div>
                                         <p>{product.name}</p>
                                         <button onClick={() => handleAddItem(product)} className='px-1 rounded-lg mt-2 font-semibold flex justify-center items-center gap-2 border border-black'>
-                                            <p>Add to card</p>
+                                            <p>Add to cart</p>
                                         </button>  
                                     </div>
                                     <div className='flex flex-col justify-center items-end'>
@@ -234,7 +234,7 @@ export default function Storefront({carts, handleCarts}) {
                                     <div>
                                         <p>{product.name}</p>
                                         <button onClick={() => handleAddItem(product)} className='px-1 rounded-lg mt-2 font-semibold flex justify-center items-center gap-2 border border-black'>
-                                            <p>Add to card</p>
+                                            <p>Add to cart</p>
                                         </button>  
                                     </div>
                                     <div className='flex flex-col justify-center items-end'>
